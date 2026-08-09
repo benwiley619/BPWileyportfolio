@@ -57,7 +57,7 @@
   /* ---------- MASTHEAD ---------- */
   header.masthead{
     border-bottom:5px double var(--ink);
-    padding:12px 0 20px;
+    padding:40px 0 30px;
   }
   .dateline{
     display:flex;
@@ -74,22 +74,23 @@
   }
   .masthead-main{
     display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    flex-wrap:wrap;
-    gap:16px;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:30px;
   }
   .masthead-id{
     display:flex;
-    align-items:flex-end;
+    flex-direction:column;
+    align-items:center;
     gap:22px;
   }
   .press-photo{
-    width:104px;
-    height:104px;
+    width:140px;
+    height:140px;
     object-fit:cover;
     border:3px solid var(--ink);
-    box-shadow:5px 5px 0 var(--field);
+    box-shadow:8px 8px 0 var(--field);
     flex-shrink:0;
   }
   .press-photo-wrap{
@@ -97,6 +98,7 @@
     flex-direction:column;
     align-items:center;
     gap:6px;
+    order:2;
   }
   .press-photo-label{
     font-family:'IBM Plex Mono', monospace;
@@ -108,10 +110,12 @@
   h1.byline-name{
     font-family:'Anton', sans-serif;
     font-weight:400;
-    font-size:clamp(52px, 9vw, 96px);
+    font-size:clamp(66px, 12vw, 120px);
     line-height:0.88;
     letter-spacing:0.01em;
     text-transform:uppercase;
+    order:1;
+    margin-bottom:10px;
   }
   .masthead-tag{
     font-family:'Oswald', sans-serif;
@@ -120,8 +124,8 @@
     letter-spacing:0.14em;
     text-transform:uppercase;
     color:var(--field);
-    max-width:280px;
-    text-align:right;
+    max-width:100%;
+    text-align:center;
   }
   .beats{
     margin-top:14px;
@@ -142,6 +146,7 @@
     display:flex;
     gap:0;
     flex-wrap:wrap;
+    justify-content:center;
   }
   nav.subnav a{
     font-family:'Oswald', sans-serif;
@@ -384,11 +389,12 @@
   }
 
   @media (max-width:640px){
-    .masthead-main{flex-direction:column; align-items:flex-start;}
-    .masthead-tag{text-align:left;}
+    .masthead-main{flex-direction:column; align-items:center;}
+    .masthead-tag{text-align:center;}
     .masthead-id{align-items:center;}
-    .press-photo{width:76px; height:76px;}
+    .press-photo{width:120px; height:120px;}
     .log-row{grid-template-columns:1fr; gap:8px;}
+    nav.subnav .wrap{justify-content:center;}
   }
 </style>
 </head>
@@ -408,11 +414,11 @@
 <header class="masthead">
   <div class="wrap">
     <div class="masthead-main">
+      <h1 class="byline-name">Ben Wiley</h1>
       <div class="masthead-id">
         <div class="press-photo-wrap">
-          <img class="press-photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcG[...]
+          <img class="press-photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcG[...]" alt="Ben Wiley">
         </div>
-        <h1 class="byline-name">Ben<br>Wiley</h1>
       </div>
       <div class="masthead-tag">Sports Journalist &amp; Multimedia Reporter</div>
     </div>
